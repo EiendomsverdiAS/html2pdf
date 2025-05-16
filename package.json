@@ -1,0 +1,16 @@
+{
+   "name": "ev-web-pdf",
+   "version": "1.0.0",
+   "description": "Pdf generator run Node.js with Puppeteer",
+   "author": "EV",
+   "main": "src/server.js",
+   "scripts": {
+      "start": "node ./src/server.js",
+      "test:intergration": "node ./tests/integration.test.js"
+   },
+   "dependencies": {
+      "applicationinsights": "^3.6.0",
+      "express": "^5.1.0",
+      "puppeteer": "^24.6.0"
+   }
+}
