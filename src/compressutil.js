@@ -1,4 +1,4 @@
-const { exec, spawn } = require('child_process');
+const { spawn } = require('child_process');
 
 /**
  * Compresses a PDF buffer using Ghostscript.

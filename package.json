@@ -6,11 +6,11 @@
    "main": "src/server.js",
    "scripts": {
       "start": "node ./src/server.js",
-      "test:intergration": "node ./tests/integration.test.js"
+      "test:integration": "node ./tests/integration.test.js"
    },
    "dependencies": {
-      "applicationinsights": "^3.6.0",
-      "express": "^5.1.0",
-      "puppeteer": "^24.6.0"
+      "applicationinsights": "^3.14.0",
+      "express": "^5.2.1",
+      "puppeteer": "^24.40.0"
    }
 }

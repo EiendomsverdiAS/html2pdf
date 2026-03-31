@@ -1,5 +1,5 @@
 # Filename: Dockerfile
-FROM ghcr.io/puppeteer/puppeteer:24.6.0
+FROM ghcr.io/puppeteer/puppeteer:24.40.0
 
 USER root
 
