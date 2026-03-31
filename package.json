@@ -6,8 +6,7 @@
    "main": "src/server.js",
    "scripts": {
       "start": "node ./src/server.js",
-      "test:unit": "node --test tests/unit.test.js",
-      "test:integration": "node ./tests/integration.test.js"
+      "test:unit": "node --test tests/unit.test.js"
    },
    "dependencies": {
       "applicationinsights": "^3.14.0",
