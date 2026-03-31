@@ -29,11 +29,13 @@ Module._load = function stubLoad(request, parent, isMain) {
     return _originalLoad.apply(this, arguments);
 };
 
-const telemetry = require('../src/telemetry');
-
-// Restore so remaining requires are unaffected.
-Module._load = _originalLoad;
-
+let telemetry;
+try {
+    telemetry = require('../src/telemetry');
+} finally {
+    // Restore so remaining requires are unaffected.
+    Module._load = _originalLoad;
+}
 // ---------------------------------------------------------------------------
 // telemetry.js
 // ---------------------------------------------------------------------------
