@@ -6,7 +6,7 @@ let browser;
 
 async function init()  {
     browser = await puppeteer.launch({
-        headless: true,
+        headless: "new",
         args: [
             "--disable-gpu",
             "--disable-dev-shm-usage",
@@ -68,16 +68,16 @@ async function generatePdf(url, requestId, timeout = 70000, requests = [], cooki
     
         if (url.indexOf('http') !== 0) url = `http://${url}`;
     
+        await page
+            .waitForSelector(waitForSelector)
+            .then(() => console.log(`selector ${waitForSelector} found`));
+        
         // Wait for images and fonts to load
         trackTrace('goto page ' + url, start, requestId);
         await page.goto(url,  {
             timeout,
             waitUntil: ["networkidle0", "domcontentloaded"]
         });
-
-        await page
-            .waitForSelector(waitForSelector)
-            .then(() => console.log(`selector ${waitForSelector} found`));
 
         trackTrace('generating pdf', start, requestId);
         const pdfBuffer = await page.pdf({printBackground: true, format: 'A4', landscape: false, timeout});
