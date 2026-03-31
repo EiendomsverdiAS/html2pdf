@@ -6,7 +6,8 @@
  * Run:  node --test tests/unit.test.js
  *
  * NOTE: compressPdfBuffer() relies on a Ghostscript process and is therefore
- *       only exercised in integration tests (tests/integration.test.js).
+ *       only fully exercised in integration tests that run with Ghostscript
+ *       available.
  */
 
 const { describe, it } = require('node:test');
