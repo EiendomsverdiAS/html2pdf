@@ -21,14 +21,6 @@ function generateRequestId() {
     return `${milliseconds}-${Math.random().toString(36).slice(2, 9)}`;
 }
 
-function startTimer(target) {
-    console.time(target);
-}
-
-function endTimer(target) {
-    console.timeEnd(target);
-}
-
 /**
  * Tracks and logs a trace message with the elapsed time and request ID.
  * 
@@ -48,4 +40,4 @@ function clock(start) {
     return Math.round((end[0]*1000) + (end[1]/1000000));
 }
 
-module.exports = { initAppInsights, clock, startTimer, endTimer, trackTrace, generateRequestId };
+module.exports = { initAppInsights, clock, trackTrace, generateRequestId };

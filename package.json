@@ -6,11 +6,17 @@
    "main": "src/server.js",
    "scripts": {
       "start": "node ./src/server.js",
-      "test:intergration": "node ./tests/integration.test.js"
+      "test:unit": "node --test tests/unit.test.js"
+   },
+   "engines": {
+      "node": ">=20.6.0"
    },
    "dependencies": {
-      "applicationinsights": "^3.6.0",
-      "express": "^5.1.0",
-      "puppeteer": "^24.6.0"
+      "applicationinsights": "^3.14.0",
+      "express": "^5.2.1",
+      "puppeteer": "^24.42.0"
+   },
+   "overrides": {
+      "uuid": ">=14.0.0"
    }
 }
